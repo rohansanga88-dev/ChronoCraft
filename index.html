@@ -9,61 +9,57 @@
 
 <body>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="logo">ChronoCraft</div>
-        <nav class="navbar">
-            <a href="index.html" class="active">Home</a>
-            <a href="products.html">Watches</a>
-            <a href="cart.html">Cart</a>
-        </nav>
-    </header>
+<header class="header">
+    <div class="logo">ChronoCraft</div>
+    <nav class="navbar">
+        <a href="index.html" class="active">Home</a>
+        <a href="products.html">Watches</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+</header>
 
-    <!-- Hero -->
-    <section class="hero luxury-hero">
-        <div class="hero-content">
-            <h1>Where Time Meets Luxury</h1>
-            <p>Hand-crafted watches engineered for excellence.</p>
-            <a href="products.html" class="btn gold-btn">Explore Collection</a>
+<section class="hero luxury-hero">
+    <div class="hero-content">
+        <h1>Where Time Meets Luxury</h1>
+        <p>Hand-crafted watches engineered for excellence.</p>
+        <a href="products.html" class="btn gold-btn">Explore Collection</a>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title gold">Featured Timepieces</h2>
+
+    <div class="products-grid">
+
+        <div class="product">
+            <img src="https://i.imgur.com/j4hfy6A.jpeg" alt="">
+            <h3>Midnight Gold Edition</h3>
+            <p class="price">₹14,999</p>
+            <button class="btn gold-btn" onclick="addToCart('Midnight Gold Edition', 14999)">Add to Cart</button>
         </div>
-    </section>
 
-    <!-- Featured -->
-    <section class="section">
-        <h2 class="section-title gold">Featured Timepieces</h2>
-
-        <div class="products-grid">
-
-            <div class="product">
-                <img src="https://i.imgur.com/j4hfy6A.jpeg" alt="">
-                <h3>Midnight Gold Edition</h3>
-                <p class="price">₹14,999</p>
-                <button class="btn gold-btn" onclick="addToCart('Midnight Gold Edition', 14999)">Add to Cart</button>
-            </div>
-
-            <div class="product">
-                <img src="https://i.imgur.com/5AGAN0Y.jpeg" alt="">
-                <h3>Royal Jet Black</h3>
-                <p class="price">₹12,499</p>
-                <button class="btn gold-btn" onclick="addToCart('Royal Jet Black', 12499)">Add to Cart</button>
-            </div>
-
-            <div class="product">
-                <img src="https://i.imgur.com/6zKrO8G.jpeg" alt="">
-                <h3>Emperor Titanium</h3>
-                <p class="price">₹18,599</p>
-                <button class="btn gold-btn" onclick="addToCart('Emperor Titanium', 18599)">Add to Cart</button>
-            </div>
-
+        <div class="product">
+            <img src="https://i.imgur.com/5AGAN0Y.jpeg" alt="">
+            <h3>Royal Jet Black</h3>
+            <p class="price">₹12,499</p>
+            <button class="btn gold-btn" onclick="addToCart('Royal Jet Black', 12499)">Add to Cart</button>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>© 2025 ChronoCraft. Crafted With Precision.</p>
-    </footer>
+        <div class="product">
+            <img src="https://i.imgur.com/6zKrO8G.jpeg" alt="">
+            <h3>Emperor Titanium</h3>
+            <p class="price">₹18,599</p>
+            <button class="btn gold-btn" onclick="addToCart('Emperor Titanium', 18599)">Add to Cart</button>
+        </div>
 
-    <script src="script.js"></script>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>© 2025 ChronoCraft. Crafted With Precision.</p>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
