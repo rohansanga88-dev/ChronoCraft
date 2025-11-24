@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChronoCraft | Luxury Collection</title>
+    <title>ChronoCraft | Elite Collection</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+
+<!-- Custom Cursor -->
+<div class="cursor"></div>
+<div class="cursor2"></div>
 
 <header class="header">
     <div class="logo">ChronoCraft</div>
@@ -19,41 +23,66 @@
 </header>
 
 <section class="section">
-    <h2 class="section-title gold">Luxury Collection</h2>
+    <h2 class="section-title gold">Luxury Watch Collection</h2>
 
-    <input type="text" id="searchBox" placeholder="Search luxury watches..." onkeyup="searchProducts()" class="search-box dark">
+    <!-- Search -->
+    <input type="text" id="searchBox" class="search-box dark" placeholder="Search luxury watches..." onkeyup="searchProducts()">
 
+    <!-- Filter -->
     <select id="filterPrice" class="filter-box dark" onchange="filterProducts()">
         <option value="all">Filter by Price</option>
         <option value="low">Below ₹10,000</option>
-        <option value="mid">₹10,000 - ₹15,000</option>
-        <option value="high">Above ₹15,000</option>
+        <option value="mid">₹10,000 - ₹20,000</option>
+        <option value="high">Above ₹20,000</option>
     </select>
 
+    <!-- Product Grid -->
     <div class="products-grid" id="productList">
 
-        <div class="product" data-name="Midnight Gold Edition" data-price="14999">
-            <img src="https://i.imgur.com/j4hfy6A.jpeg" alt="">
+        <div class="product card-float" data-name="Midnight Gold Edition" data-price="14999">
+            <img src="https://i.imgur.com/j4hfy6A.jpeg">
             <h3>Midnight Gold Edition</h3>
             <p class="price">₹14,999</p>
-            <button class="btn gold-btn" onclick="addToCart('Midnight Gold Edition', 14999)">Add to Cart</button>
+            <button class="btn gold-btn" onclick="addToCart('Midnight Gold Edition',14999)">Add to Cart</button>
         </div>
 
-        <div class="product" data-name="Royal Jet Black" data-price="12499">
-            <img src="https://i.imgur.com/5AGAN0Y.jpeg" alt="">
+        <div class="product card-float" data-name="Royal Jet Black" data-price="12499">
+            <img src="https://i.imgur.com/5AGAN0Y.jpeg">
             <h3>Royal Jet Black</h3>
             <p class="price">₹12,499</p>
-            <button class="btn gold-btn" onclick="addToCart('Royal Jet Black', 12499)">Add to Cart</button>
+            <button class="btn gold-btn" onclick="addToCart('Royal Jet Black',12499)">Add to Cart</button>
         </div>
 
-        <div class="product" data-name="Emperor Titanium" data-price="18599">
-            <img src="https://i.imgur.com/6zKrO8G.jpeg" alt="">
+        <div class="product card-float" data-name="Emperor Titanium" data-price="18999">
+            <img src="https://i.imgur.com/6zKrO8G.jpeg">
             <h3>Emperor Titanium</h3>
-            <p class="price">₹18,599</p>
-            <button class="btn gold-btn" onclick="addToCart('Emperor Titanium', 18599)">Add to Cart</button>
+            <p class="price">₹18,999</p>
+            <button class="btn gold-btn" onclick="addToCart('Emperor Titanium',18999)">Add to Cart</button>
+        </div>
+
+        <div class="product card-float" data-name="Nocturnal Steel Pro" data-price="13999">
+            <img src="https://i.imgur.com/LmG22v2.jpeg">
+            <h3>Nocturnal Steel Pro</h3>
+            <p class="price">₹13,999</p>
+            <button class="btn gold-btn" onclick="addToCart('Nocturnal Steel Pro',13999)">Add to Cart</button>
+        </div>
+
+        <div class="product card-float" data-name="Golden Prestige Master" data-price="22999">
+            <img src="https://i.imgur.com/Bp7UNTG.jpeg">
+            <h3>Golden Prestige Master</h3>
+            <p class="price">₹22,999</p>
+            <button class="btn gold-btn" onclick="addToCart('Golden Prestige Master',22999)">Add to Cart</button>
+        </div>
+
+        <div class="product card-float" data-name="Black Steel Chronograph" data-price="16999">
+            <img src="https://i.imgur.com/70HIGhC.jpeg">
+            <h3>Black Steel Chronograph</h3>
+            <p class="price">₹16,999</p>
+            <button class="btn gold-btn" onclick="addToCart('Black Steel Chronograph',16999)">Add to Cart</button>
         </div>
 
     </div>
+
 </section>
 
 <footer class="footer">
@@ -61,6 +90,5 @@
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
