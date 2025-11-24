@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | ChronoCraft</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">ChronoCraft</div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="products.html">Watches</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+
+    <section class="section">
+        <h2 class="section-title">Checkout</h2>
+
+        <div class="checkout-container">
+
+            <!-- Delivery Details -->
+            <div class="checkout-box">
+                <h3>Delivery Details</h3>
+
+                <input type="text" placeholder="Full Name" class="input-box">
+                <input type="text" placeholder="Mobile Number" class="input-box">
+                <input type="text" placeholder="Address Line 1" class="input-box">
+                <input type="text" placeholder="City" class="input-box">
+                <input type="text" placeholder="Pincode" class="input-box">
+
+                <label>Delivery Area:</label>
+                <select class="input-box">
+                    <option>Hyderabad</option>
+                    <option>Bengaluru</option>
+                    <option>Mumbai</option>
+                    <option>Delhi</option>
+                    <option>Chennai</option>
+                </select>
+            </div>
+
+            <!-- Payment -->
+            <div class="checkout-box">
+                <h3>Payment Method</h3>
+
+                <label><input type="radio" name="method"> UPI</label>
+                <label><input type="radio" name="method"> Cash on Delivery</label>
+                <label><input type="radio" name="method"> Debit/Credit Card</label>
+
+                <a href="thankyou.html" class="btn">Place Order</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 ChronoCraft. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
