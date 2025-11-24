@@ -9,6 +9,9 @@
 
 <body>
 
+<div class="cursor"></div>
+<div class="cursor2"></div>
+
 <header class="header">
     <div class="logo">ChronoCraft</div>
     <nav class="navbar">
@@ -19,20 +22,21 @@
 </header>
 
 <section class="section">
-    <h2 class="section-title gold">Checkout</h2>
+    <h2 class="section-title gold">Secure Checkout</h2>
 
-    <div class="checkout-container">
+    <div class="checkout-super-container">
 
-        <div class="checkout-box">
-            <h3>Delivery Details</h3>
+        <!-- LEFT: Delivery Form -->
+        <div class="checkout-left">
+            <h3 class="gold">Delivery Details</h3>
 
-            <input type="text" placeholder="Full Name" class="input-box">
-            <input type="text" placeholder="Mobile Number" class="input-box">
-            <input type="text" placeholder="Address Line 1" class="input-box">
-            <input type="text" placeholder="City" class="input-box">
-            <input type="text" placeholder="Pincode" class="input-box">
+            <input type="text" class="input-box" placeholder="Full Name">
+            <input type="text" class="input-box" placeholder="Phone Number">
+            <input type="text" class="input-box" placeholder="Address Line 1">
+            <input type="text" class="input-box" placeholder="City">
+            <input type="text" class="input-box" placeholder="Pincode">
 
-            <label>Delivery City:</label>
+            <label class="gold">Select Delivery City:</label>
             <select class="input-box">
                 <option>Hyderabad</option>
                 <option>Bengaluru</option>
@@ -40,23 +44,72 @@
                 <option>Delhi</option>
                 <option>Chennai</option>
             </select>
+
+            <br><br>
+
+            <h3 class="gold">Payment Method</h3>
+
+            <!-- UPI Section -->
+            <div class="payment-box">
+                <label><input type="radio" name="payment"> UPI</label>
+
+                <div class="upi-icons">
+                    <img src="https://i.imgur.com/WCReL8K.png">
+                    <img src="https://i.imgur.com/P7Jqj8q.png">
+                    <img src="https://i.imgur.com/r7uN3Yi.png">
+                </div>
+            </div>
+
+            <!-- Card Section -->
+            <div class="payment-box">
+                <label><input type="radio" name="payment"> Debit / Credit Card</label>
+                <div class="card-icons">
+                    <img src="https://i.imgur.com/MiJ3M3a.png">
+                    <img src="https://i.imgur.com/a7Q4QPw.png">
+                    <img src="https://i.imgur.com/lAkYBAi.png">
+                </div>
+            </div>
+
+            <!-- Net Banking -->
+            <div class="payment-box">
+                <label><input type="radio" name="payment"> Net Banking</label>
+
+                <select class="input-box small">
+                    <option>SBI</option>
+                    <option>HDFC</option>
+                    <option>ICICI</option>
+                    <option>Axis</option>
+                    <option>Kotak</option>
+                </select>
+            </div>
+
+            <!-- COD -->
+            <div class="payment-box">
+                <label><input type="radio" name="payment"> Cash on Delivery</label>
+            </div>
         </div>
 
-        <div class="checkout-box">
-            <h3>Payment Method</h3>
 
-            <label><input type="radio" name="method"> UPI</label>
-            <label><input type="radio" name="method"> Cash on Delivery</label>
-            <label><input type="radio" name="method"> Debit/Credit Card</label>
+        <!-- RIGHT: Order Summary -->
+        <div class="checkout-right">
+            <h3 class="gold">Order Summary</h3>
 
-            <a href="thankyou.html" class="btn gold-btn">Place Order</a>
+            <div id="orderSummary" class="summary-box"></div>
+
+            <h2 class="summary-total gold">Total: ₹<span id="totalPrice">0</span></h2>
+
+            <a href="thankyou.html" class="btn gold-btn full-btn">Place Order</a>
         </div>
+
     </div>
+
 </section>
 
 <footer class="footer">
     <p>© 2025 ChronoCraft. Crafted With Precision.</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
