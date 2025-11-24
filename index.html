@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChronoCraft | Luxury Timepieces</title>
+    <title>ChronoCraft | Luxury Watches</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+
+<div class="cursor"></div>
+<div class="cursor2"></div>
 
 <header class="header">
     <div class="logo">ChronoCraft</div>
@@ -18,41 +21,35 @@
     </nav>
 </header>
 
-<section class="hero luxury-hero">
+<section class="hero-3d">
+
+    <!-- Parallax Background Layers -->
+    <div class="layer layer-bg"></div>
+    <div class="layer layer-light"></div>
+
+    <!-- Main Content -->
     <div class="hero-content">
-        <h1>Where Time Meets Luxury</h1>
-        <p>Hand-crafted watches engineered for excellence.</p>
-        <a href="products.html" class="btn gold-btn">Explore Collection</a>
+        <h1 class="title">Crafted for the Elite</h1>
+        <p class="subtitle">Experience timeless luxury engineering.</p>
+
+        <div class="hero-buttons">
+            <a href="products.html" class="btn gold-btn">Explore Collection</a>
+            <a href="#about" class="btn outline-btn">Learn More</a>
+        </div>
     </div>
+
+    <!-- Floating Watches -->
+    <img src="https://i.imgur.com/j4hfy6A.png" class="floating-watch watch-left">
+    <img src="https://i.imgur.com/5AGAN0Y.png" class="floating-watch watch-right">
+
 </section>
 
-<section class="section">
-    <h2 class="section-title gold">Featured Timepieces</h2>
-
-    <div class="products-grid">
-
-        <div class="product">
-            <img src="https://i.imgur.com/j4hfy6A.jpeg" alt="">
-            <h3>Midnight Gold Edition</h3>
-            <p class="price">₹14,999</p>
-            <button class="btn gold-btn" onclick="addToCart('Midnight Gold Edition', 14999)">Add to Cart</button>
-        </div>
-
-        <div class="product">
-            <img src="https://i.imgur.com/5AGAN0Y.jpeg" alt="">
-            <h3>Royal Jet Black</h3>
-            <p class="price">₹12,499</p>
-            <button class="btn gold-btn" onclick="addToCart('Royal Jet Black', 12499)">Add to Cart</button>
-        </div>
-
-        <div class="product">
-            <img src="https://i.imgur.com/6zKrO8G.jpeg" alt="">
-            <h3>Emperor Titanium</h3>
-            <p class="price">₹18,599</p>
-            <button class="btn gold-btn" onclick="addToCart('Emperor Titanium', 18599)">Add to Cart</button>
-        </div>
-
-    </div>
+<section class="section" id="about">
+    <h2 class="section-title gold">The Art of Time</h2>
+    <p class="about-text">
+        Each ChronoCraft watch is engineered with unmatched precision,
+        forged from premium materials, and designed for those who value legacy.
+    </p>
 </section>
 
 <footer class="footer">
