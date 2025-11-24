@@ -3,88 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChronoCraft | All Watches</title>
+    <title>ChronoCraft | Luxury Collection</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="logo">ChronoCraft</div>
-        <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="products.html" class="active">Watches</a>
-            <a href="cart.html">Cart</a>
-        </nav>
-    </header>
+<header class="header">
+    <div class="logo">ChronoCraft</div>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Watches</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+</header>
 
-    <section class="section">
-        <h2 class="section-title">All Watches</h2>
+<section class="section">
+    <h2 class="section-title gold">Luxury Collection</h2>
 
-        <!-- Search -->
-        <input type="text" id="searchBox" placeholder="Search watches..." onkeyup="searchProducts()" class="search-box">
+    <input type="text" id="searchBox" placeholder="Search luxury watches..." onkeyup="searchProducts()" class="search-box dark">
 
-        <!-- Filter -->
-        <select id="filterPrice" class="filter-box" onchange="filterProducts()">
-            <option value="all">Filter by Price</option>
-            <option value="low">Below ₹5000</option>
-            <option value="mid">₹5000 - ₹7000</option>
-            <option value="high">Above ₹7000</option>
-        </select>
+    <select id="filterPrice" class="filter-box dark" onchange="filterProducts()">
+        <option value="all">Filter by Price</option>
+        <option value="low">Below ₹10,000</option>
+        <option value="mid">₹10,000 - ₹15,000</option>
+        <option value="high">Above ₹15,000</option>
+    </select>
 
-        <!-- Products Grid -->
-        <div class="products-grid" id="productList">
+    <div class="products-grid" id="productList">
 
-            <div class="product" data-name="Classic Leather Watch" data-price="4999">
-                <img src="https://i.imgur.com/tdbt1a8.jpeg" alt="">
-                <h3>Classic Leather Watch</h3>
-                <p>₹4,999</p>
-                <button class="btn" onclick="addToCart('Classic Leather Watch', 4999)">Add to Cart</button>
-            </div>
-
-            <div class="product" data-name="Royal Gold Edition" data-price="7499">
-                <img src="https://i.imgur.com/d9vindE.jpeg" alt="">
-                <h3>Royal Gold Edition</h3>
-                <p>₹7,499</p>
-                <button class="btn" onclick="addToCart('Royal Gold Edition', 7499)">Add to Cart</button>
-            </div>
-
-            <div class="product" data-name="Vintage Brown Strap" data-price="5299">
-                <img src="https://i.imgur.com/0mG8dXr.jpeg" alt="">
-                <h3>Vintage Brown Strap</h3>
-                <p>₹5,299</p>
-                <button class="btn" onclick="addToCart('Vintage Brown Strap', 5299)">Add to Cart</button>
-            </div>
-
-            <div class="product" data-name="Leather Chrono Pro" data-price="6599">
-                <img src="https://i.imgur.com/pPtGp0m.jpeg" alt="">
-                <h3>Leather Chrono Pro</h3>
-                <p>₹6,599</p>
-                <button class="btn" onclick="addToCart('Leather Chrono Pro', 6599)">Add to Cart</button>
-            </div>
-
-            <div class="product" data-name="Heritage Gold Classic" data-price="8499">
-                <img src="https://i.imgur.com/OHGlfxY.jpeg" alt="">
-                <h3>Heritage Gold Classic</h3>
-                <p>₹8,499</p>
-                <button class="btn" onclick="addToCart('Heritage Gold Classic', 8499)">Add to Cart</button>
-            </div>
-
-            <div class="product" data-name="Elite Brown Masterpiece" data-price="9999">
-                <img src="https://i.imgur.com/m0pPG0e.jpeg" alt="">
-                <h3>Elite Brown Masterpiece</h3>
-                <p>₹9,999</p>
-                <button class="btn" onclick="addToCart('Elite Brown Masterpiece', 9999)">Add to Cart</button>
-            </div>
-
+        <div class="product" data-name="Midnight Gold Edition" data-price="14999">
+            <img src="https://i.imgur.com/j4hfy6A.jpeg" alt="">
+            <h3>Midnight Gold Edition</h3>
+            <p class="price">₹14,999</p>
+            <button class="btn gold-btn" onclick="addToCart('Midnight Gold Edition', 14999)">Add to Cart</button>
         </div>
-    </section>
 
-    <footer class="footer">
-        <p>© 2025 ChronoCraft. All Rights Reserved.</p>
-    </footer>
+        <div class="product" data-name="Royal Jet Black" data-price="12499">
+            <img src="https://i.imgur.com/5AGAN0Y.jpeg" alt="">
+            <h3>Royal Jet Black</h3>
+            <p class="price">₹12,499</p>
+            <button class="btn gold-btn" onclick="addToCart('Royal Jet Black', 12499)">Add to Cart</button>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="product" data-name="Emperor Titanium" data-price="18599">
+            <img src="https://i.imgur.com/6zKrO8G.jpeg" alt="">
+            <h3>Emperor Titanium</h3>
+            <p class="price">₹18,599</p>
+            <button class="btn gold-btn" onclick="addToCart('Emperor Titanium', 18599)">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <p>© 2025 ChronoCraft. Crafted With Precision.</p>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
