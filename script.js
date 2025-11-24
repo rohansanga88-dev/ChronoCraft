@@ -1,20 +1,16 @@
-// ------------------ CART SYSTEM ------------------
-
+// CART SYSTEM
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// Save Cart
 function saveCart() {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-// Add to Cart
 function addToCart(name, price) {
     cart.push({ name, price });
     saveCart();
-    alert(name + " added to cart!");
+    alert("Added to cart: " + name);
 }
 
-// Load Cart Items (cart.html)
 function loadCart() {
     const cartBox = document.getElementById("cartItems");
     const totalPriceSpan = document.getElementById("totalPrice");
@@ -38,54 +34,44 @@ function loadCart() {
     totalPriceSpan.innerText = total;
 }
 
-// Remove Item from Cart
 function removeItem(index) {
     cart.splice(index, 1);
     saveCart();
     loadCart();
 }
 
-// Clear Cart
 function clearCart() {
     cart = [];
     saveCart();
     loadCart();
 }
 
-// Auto-load cart on cart.html
 if (window.location.pathname.includes("cart.html")) {
     loadCart();
 }
 
-
-
-// ------------------ PRODUCT SEARCH ------------------
-
+// SEARCH SYSTEM
 function searchProducts() {
-    let input = document.getElementById("searchBox").value.toLowerCase();
+    let value = document.getElementById("searchBox").value.toLowerCase();
     let products = document.querySelectorAll("#productList .product");
 
-    products.forEach(product => {
-        let name = product.getAttribute("data-name").toLowerCase();
-        product.style.display = name.includes(input) ? "block" : "none";
+    products.forEach(p => {
+        let name = p.getAttribute("data-name").toLowerCase();
+        p.style.display = name.includes(value) ? "block" : "none";
     });
 }
 
-
-
-// ------------------ PRICE FILTER ------------------
-
+// FILTER SYSTEM
 function filterProducts() {
     let option = document.getElementById("filterPrice").value;
     let products = document.querySelectorAll("#productList .product");
 
     products.forEach(product => {
         let price = parseInt(product.getAttribute("data-price"));
+        product.style.display = "block";
 
-        product.style.display = "block"; // default
-
-        if (option === "low" && price >= 5000) product.style.display = "none";
-        if (option === "mid" && (price < 5000 || price > 7000)) product.style.display = "none";
-        if (option === "high" && price <= 7000) product.style.display = "none";
+        if (option === "low" && price >= 10000) product.style.display = "none";
+        if (option === "mid" && (price < 10000 || price > 15000)) product.style.display = "none";
+        if (option === "high" && price <= 15000) product.style.display = "none";
     });
 }
