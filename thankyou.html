@@ -5,9 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Successful | ChronoCraft</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Confetti Animation */
+        .confetti {
+            position: fixed;
+            top: -10px;
+            width: 10px;
+            height: 10px;
+            background: #d4af37;
+            opacity: 0.7;
+            animation: fall 3s linear infinite;
+            border-radius: 2px;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(120vh) rotate(360deg); }
+        }
+
+        /* Floating Gold Particles */
+        .particle {
+            position: absolute;
+            background: #d4af37;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: float 4s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 0.7; }
+            50% { transform: translateY(-20px); opacity: 1; }
+            100% { transform: translateY(0); opacity: 0.7; }
+        }
+
+        .thankyou-box {
+            text-align: center;
+            margin-top: 10vh;
+        }
+
+        .order-id {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #d4af37;
+        }
+    </style>
 </head>
 
 <body>
+
+<!-- Custom Cursors -->
+<div class="cursor"></div>
+<div class="cursor2"></div>
+
+<!-- Confetti Burst -->
+<script>
+    for (let i = 0; i < 40; i++) {
+        let conf = document.createElement("div");
+        conf.classList.add("confetti");
+        conf.style.left = Math.random() * 100 + "vw";
+        conf.style.animationDuration = (2 + Math.random() * 3) + "s";
+        document.body.appendChild(conf);
+    }
+
+    for (let i = 0; i < 30; i++) {
+        let particle = document.createElement("div");
+        particle.classList.add("particle");
+        particle.style.left = Math.random() * 100 + "vw";
+        particle.style.top = Math.random() * 100 + "vh";
+        particle.style.animationDuration = (3 + Math.random() * 4) + "s";
+        document.body.appendChild(particle);
+    }
+</script>
 
 <header class="header">
     <div class="logo">ChronoCraft</div>
@@ -17,16 +88,27 @@
     </nav>
 </header>
 
-<section class="section center">
-    <h1 class="success-title gold">✔ Order Placed Successfully!</h1>
-    <p class="success-text">Your luxury timepiece will be delivered soon.</p>
+<div class="thankyou-box">
+    <h1 class="gold" style="font-size: 48px;">✔ Order Placed Successfully!</h1>
 
-    <a href="index.html" class="btn gold-btn">Back to Home</a>
-</section>
+    <p class="success-text" style="font-size: 22px; color: #ddd;">
+        Your luxury timepiece is on its way.
+    </p>
 
-<footer class="footer">
-    <p>© 2025 ChronoCraft. Crafted With Precision.</p>
-</footer>
+    <div class="order-id">
+        Order ID: <span id="orderID"></span>
+    </div>
+
+    <a href="index.html" class="btn gold-btn" style="margin-top: 30px; display:inline-block;">
+        Continue Shopping
+    </a>
+</div>
+
+<script>
+    // Generate Order ID
+    document.getElementById("orderID").innerText =
+        "CC-" + Math.floor(Math.random() * 900000 + 100000);
+</script>
 
 </body>
 </html>
